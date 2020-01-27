@@ -209,7 +209,7 @@ global species;
 disp("Table showing temperature dependance of the reaction Gibbs Free Energy:");
 displaytable = table();
 for T = 300:100:1400
-    G_reaction = find_gibbs_free_energy("CO2", T) + find_gibbs_free_energy("H2", T) - find_gibbs_free_energy("CO", T) + find_gibbs_free_energy("H2O(L)", T);
+    G_reaction = find_gibbs_free_energy("CO2", T) + find_gibbs_free_energy("H2", T) - find_gibbs_free_energy("CO", T) - find_gibbs_free_energy("H2O(L)", T);
     newrow = {T, G_reaction};
     displaytable = [displaytable; newrow];
 end
